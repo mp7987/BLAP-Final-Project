@@ -1,0 +1,113 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.content-wrapper {
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+input {
+  color: rgba(0, 0, 0, .87);
+  width: 100%;
+  max-width: 800px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.navbar {
+  height: 165px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.search-wrapper {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  padding: 0 20px 0 8px;
+  font-size: 32px;
+  transition: all .2s ease;
+  color: #6030b1;
+}
+
+.navbar .logo {
+  height: 40px;
+  width: 60px;
+}
+
+.navbar .links {
+  width: 100%;
+  max-width: 215px;
+}
+
+.overlay {
+  background-image: url(https://wallpapers.com/images/hd/movie-poster-background-q1zm830g0hfww2lk.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(7px);
+  border-radius: 5px;
+}
+
+#search {
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.white-txt {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
