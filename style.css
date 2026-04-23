@@ -37,7 +37,7 @@ input {
 }
 
 .navbar {
-  height: 165px;
+  height: 0px;
   display: flex;
   align-items: center;
   padding: 0 50px;
@@ -69,21 +69,21 @@ input {
   max-width: 215px;
 }
 
-.overlay {
+#landing-page {
   background-image: url(https://wallpapers.com/images/hd/movie-poster-background-q1zm830g0hfww2lk.jpg);
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
+  position: relative;
+}
+
+.background {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  filter: blur(7px);
-  border-radius: 5px;
 }
 
 #search {
