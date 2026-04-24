@@ -1,10 +1,16 @@
 * {
   font-family: sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .flex {
   display: flex !important;
+}
+
+img {
+  width: 100%;
 }
 
 .flex-col {
@@ -25,6 +31,18 @@
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.content-wrapper h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.loading-state {
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
@@ -36,18 +54,23 @@ input {
   padding-left: 20px;
 }
 
+.app {
+  min-height: 100vh;
+}
+
 .navbar {
-  height: 0px;
   display: flex;
   align-items: center;
   padding: 0 50px;
   font-size: 18px;
   font-weight: 600;
+  height: 30vh;
   color: white;
+  justify-content: space-evenly;
 }
 
 .search-wrapper {
-  position: absolute;
+  position: absolute !important;
   cursor: pointer;
   top: 0;
   bottom: 0;
@@ -55,7 +78,7 @@ input {
   z-index: 10000;
   padding: 0 20px 0 8px;
   font-size: 32px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   color: #6030b1;
 }
 
@@ -69,12 +92,19 @@ input {
   max-width: 215px;
 }
 
-#landing-page {
+.app .flex {
+  position: relative;
+}
+
+.overlay {
   background-image: url(https://wallpapers.com/images/hd/movie-poster-background-q1zm830g0hfww2lk.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50%;
   background-size: cover;
-  position: relative;
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  filter: blur(6px);
 }
 
 .background {
@@ -86,15 +116,18 @@ input {
   z-index: -1;
 }
 
+.input-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
 #search {
   position: relative;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
-}
-
-.white-txt {
-  color: white;
+  min-height: 70vh;
 }
 
 a {
@@ -110,4 +143,39 @@ a {
 
 .svg-inline--fa.fa-w-16 {
   width: 1em;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: calc(100% / 3);
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .movie {
+    width: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .movie {
+    width: 100%;
+  }
 }
