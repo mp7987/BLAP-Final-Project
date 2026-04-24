@@ -13,7 +13,7 @@ document.querySelector(".input").addEventListener("keypress", (e) => {
 const moviesContainer = document.querySelector(".movies-container");
 async function fetchMovies() {
   const res = await fetch(
-    `http://www.omdbapi.com/?apikey=a4bd795f&s=${searchTerm || "batman"}`
+    `https://www.omdbapi.com/?apikey=a4bd795f&s=${searchTerm || "batman"}`
   );
   const { Search: movies } = await res.json();
   moviesContainer.innerHTML = movies
